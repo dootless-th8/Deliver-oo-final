@@ -1,20 +1,37 @@
 # oo_delivery.py
 
 ## Ovrview
-This project is about creating delivery service that utilise oop programming formula
+This project is about creating delivery service that utilise oo programming formula
 
-## Feature
+## Features
 * ### class Person:
-       Can say Hi
-    #### Customer (Inherit):
-        Can order things
+       @Requires 1 argument
+       Attribute: name(arg) 
+       Method: 
+            introduce(): Can return string Hi with the name
+
+    #### Customer (Inherit Person):    
+        @Requires 2 argument
+        Contains: name(inherit Person)(arg), address(arg)
+        Method: 
+            place_order( item:str ): Can order thing which intern returns a DeliveryOrder object
         !!composit of DeliveryOrder
-    #### Driver (Inherit):
-        Delivers order
+
+    #### Driver (Inherit Person):        
+        @Requires 2 argument
+        Contains: name(inherit Person)(arg), vehhicle(arg)
+        Method: 
+            deliver( order:DeliveryOrder ): Prints delivered text with and switchs DeliveryOrder obj's order status to "delivered"
         !!composit of DeliveryOrder
-* ### class Person:
+
+* ### class DeliveryOrder:
         has order info
-        can change detemine status of the order
+        @Requires 2 argument
+        Contains: customer(arg), item(arg), status
+        Method: 
+            assign_driver( driver:Driver ): Assign the driver to this order
+            summary(): If the order hasn't been delivered, it will then list the info of the order(item, customer's name, status, driver's name).else it will just give out text "Order for ***Laptop*** → delivered"
+        
 
 ## How to run
 Create driver and customer objects first, then assigned the order of each customers. 
