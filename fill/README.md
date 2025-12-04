@@ -34,7 +34,8 @@ This project is about creating a minimal proceess of delivery service in oop sty
         
 
 ## How to run
-Create driver and customer objects first, then assigned the order of each customers. You can determined if the order has been delivered by running deliver out of the Driver object: it needs specific DeliveryOrder object as well. Furthermore, you can always check the status of the order by running summary from the certain DeliveryOrder object
+Create driver and customer objects first, then assigned the order of each customers. You can determined if the order has been delivered by running deliver out of the Driver object: it needs specific DeliveryOrder object as well. Furthermore, you can always check the status of the order by running summary from the certain DeliveryOrder object.
+
 Please Enjoy
 
 Examples:
